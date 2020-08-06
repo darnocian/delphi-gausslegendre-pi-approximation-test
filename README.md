@@ -19,19 +19,26 @@ Win32 and Win64 tests run on a Macbook 2014 using VMWare Fusion.
 iPhone 6s 64bit
 Cubot J7 Android 9 32bit
 
-Samples 1
-Iterations Per Sample: 10 000 000
+Samples 1 000 000
+
+Digits: 10 000 000 
+
+for n digits, iteration count of log2 n is used.
 
 *Release Build*
 
+|Platform| Timing  | 
+|---|---|
+| Win32 |  1357ms |  
+| Win64 |  827ms  | 
+| OSX | 3768ms |  
+| iOS |  19764ms | 
+| Android | 124339 ms | 
 
-|Platform| Normal Mode  | Faster Mode |
-|---|---|---|
-| Win32 |  6912ms |   503ms|
-| Win64 |  171ms  |   170ms|
-| OSX | 7299ms |   1931ms|
-| iOS |  8171ms |   7925ms|
-| Android |  39703ms |  45298ms|
+# NOTE
 
-* in normal mode, all variables were double type. no result was returned - suspect an overflow, but need to investigate.
-* in 'faster' mode, pi approximation was returned.
+For OSX, don't forget to stat PA Server
+
+For iOS, don't forget to 
+* set deployment provisioning profile
+* under Options | Application | Version Info, set CFBundleIdentifier

@@ -10,16 +10,15 @@ type
   TTGaussLegendrePIApproximationForm = class(TForm)
     lblTimingMSValue: TLabel;
     butCalculate: TButton;
-    edtIterations: TNumberBox;
+    edtDigits: TNumberBox;
     edtSamples: TNumberBox;
     lblTimingMS: TLabel;
     lblSamples: TLabel;
-    Label1: TLabel;
+    lblDigits: TLabel;
     lblApproximation: TLabel;
     lblApproximationValue: TLabel;
     lblPlatform: TLabel;
     lblPlatformValue: TLabel;
-    cbTryFaster: TCheckBox;
     procedure butCalculateClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -36,35 +35,29 @@ implementation
 {$R *.fmx}
 
 uses
+  System.Math,
   gauss.legendre.pi;
 
-type
-  TApproxFunc = function(Iter: integer): TFloat;
 
 procedure TTGaussLegendrePIApproximationForm.butCalculateClick(Sender: TObject);
 var
   i, deltaMS, iterations, samples: integer;
   startime, endtime: tdatetime;
-  f: TApproxFunc;
 begin
   butCalculate.Enabled := false;
-  if cbTryFaster.IsChecked then
-    f := approximatePIFaster
-  else
-    f := approximatePI;
   lblTimingMSValue.Text := '(pending';
   lblApproximationValue.Text := '(pending';
   samples := trunc(edtSamples.Value);
-  iterations := trunc(edtIterations.Value);
+  iterations := trunc(Log2(edtDigits.Value));
   startime := now;
   for i := 1 to samples do
   begin
-    lblApproximationValue.Text := FloatToStr(f(iterations));
+    lblApproximationValue.Text := FloatToStr(approximatePI(iterations));
   end;
   endtime := now;
   deltaMS := trunc(TimeStampToMSecs(DateTimeToTimeStamp(endtime)) - TimeStampToMSecs(DateTimeToTimeStamp(startime)));
 
-  lblTimingMSValue.Text := inttostr(deltaMS div samples);
+  lblTimingMSValue.Text := floattostr(deltaMS);
   butCalculate.Enabled := true;
 end;
 
