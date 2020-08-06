@@ -1,0 +1,104 @@
+object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
+  Left = 0
+  Top = 0
+  Caption = 'Gauss-Legendre Approximation of PIm'
+  ClientHeight = 298
+  ClientWidth = 405
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lblTimingMSValue: TLabel
+    Position.X = 208.000000000000000000
+    Position.Y = 104.000000000000000000
+    Text = '(pending)'
+    TabOrder = 0
+  end
+  object butCalculate: TButton
+    Position.X = 208.000000000000000000
+    Position.Y = 224.000000000000000000
+    TabOrder = 1
+    Text = 'Calculate'
+    OnClick = butCalculateClick
+  end
+  object edtIterations: TNumberBox
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Cursor = crIBeam
+    Max = 99999997952.000000000000000000
+    Value = 10000000.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 64.000000000000000000
+  end
+  object edtSamples: TNumberBox
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Cursor = crIBeam
+    Max = 99999997952.000000000000000000
+    Value = 1.000000000000000000
+    Position.X = 208.000000000000000000
+    Position.Y = 24.000000000000000000
+  end
+  object lblTimingMS: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Avg Sample Timing'
+    TabOrder = 4
+  end
+  object lblSamples: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Samples'
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Iterations Per Sample'
+    TabOrder = 6
+  end
+  object lblApproximation: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 313.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Approximation'
+    TabOrder = 7
+  end
+  object lblApproximationValue: TLabel
+    AutoSize = True
+    Position.X = 208.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 441.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    Text = '(pending)'
+    TabOrder = 8
+  end
+  object lblPlatform: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 184.000000000000000000
+    Text = 'Platform'
+    TabOrder = 9
+  end
+  object lblPlatformValue: TLabel
+    Position.X = 208.000000000000000000
+    Position.Y = 184.000000000000000000
+    Text = 'lblPlatformValue'
+    TabOrder = 10
+  end
+  object cbTryFaster: TCheckBox
+    Position.X = 24.000000000000000000
+    Position.Y = 224.000000000000000000
+    TabOrder = 11
+    Text = 'faster'
+  end
+end
