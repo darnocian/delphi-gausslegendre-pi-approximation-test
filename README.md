@@ -29,11 +29,11 @@ for n digits, iteration count of log2 n is used.
 
 |Platform| Timing  | 
 |---|---|
-| Win32 |  1357ms |  
-| Win64 |  827ms  | 
-| OSX | 3768ms |  
-| iOS |  19764ms | 
-| Android | 124339 ms | 
+| Win32 |  867ms |  
+| Win64 |  763ms  | 
+| OSX | 1699ms |  
+| iOS |  6875ms | 
+| Android | 53850ms | 
 
 # NOTE
 
