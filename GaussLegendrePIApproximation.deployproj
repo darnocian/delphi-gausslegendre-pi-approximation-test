@@ -6,9 +6,8 @@
     <PropertyGroup>
         <DeviceId Condition="'$(Platform)'=='Android'"/>
         <DeviceId Condition="'$(Platform)'=='Android64'"/>
-        <DeviceId Condition="'$(Platform)'=='iOSDevice32'">b3cad110b2584379071a1ccbcd458d7b19526506</DeviceId>
-        <DeviceId Condition="'$(Platform)'=='iOSDevice64'"/>
-        <DeviceId Condition="'$(Platform)'=='iOSSimulator'">iPhone5</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='iOSDevice64'">b3cad110b2584379071a1ccbcd458d7b19526506</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='iOSSimulator'"/>
     </PropertyGroup>
     <ItemGroup Condition="'$(Platform)'=='iOSDevice64'">
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_640x1136.png" Condition="'$(Config)'=='Debug'">
@@ -24,15 +23,6 @@
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_57x57.png</RemoteName>
             <DeployClass>iPhone_AppIcon57</DeployClass>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
-            <RemoteName>FM_ApplicationIcon_180x180.png</RemoteName>
-            <DeployClass>iPhone_AppIcon180</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -60,6 +50,15 @@
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_57x57.png</RemoteName>
             <DeployClass>iPhone_AppIcon57</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_180x180.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
+            <RemoteName>FM_ApplicationIcon_180x180.png</RemoteName>
+            <DeployClass>iPhone_AppIcon180</DeployClass>
             <Operation>0</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -182,6 +181,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1334x750.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
+            <RemoteName>Default-Landscape-750w-1334h@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch1334</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_ApplicationIcon_144x144.png" Condition="'$(Config)'=='Release'">
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>FM_ApplicationIcon_144x144.png</RemoteName>
@@ -196,15 +204,6 @@
             <RemoteName>FM_SpotlightSearchIcon_40x40.png</RemoteName>
             <DeployClass>iPhone_Spotlight40</DeployClass>
             <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_1334x750.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
-            <RemoteName>Default-Landscape-750w-1334h@2x.png</RemoteName>
-            <DeployClass>iPhone_Launch1334</DeployClass>
-            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -259,6 +258,15 @@
             <RemoteName>FM_ApplicationIcon_76x76.png</RemoteName>
             <DeployClass>iPad_AppIcon76</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImageDark_2x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPadDark@2x.png</RemoteName>
+            <DeployClass>iPad_LaunchDark2x</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -321,6 +329,15 @@
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
             <DeployClass>ProjectiOSInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_3x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPhone@3x.png</RemoteName>
+            <DeployClass>iPhone_Launch3x</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -412,6 +429,15 @@
             <RemoteName>FM_ApplicationIcon_60x60.png</RemoteName>
             <DeployClass>iPhone_AppIcon60</DeployClass>
             <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImageDark_2x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPhoneDark@2x.png</RemoteName>
+            <DeployClass>iPhone_LaunchDark2x</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
@@ -598,6 +624,24 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_2x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPhone@2x.png</RemoteName>
+            <DeployClass>iPhone_Launch2x</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImageDark_3x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPhoneDark@3x.png</RemoteName>
+            <DeployClass>iPhone_LaunchDark3x</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_SpotlightSearchIcon_100x100.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>FM_SpotlightSearchIcon_100x100.png</RemoteName>
@@ -634,6 +678,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="iOSDevice64\Release\GaussLegendrePIApproximation.launchscreen" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation.launchscreen</RemoteName>
+            <DeployClass>ProjectiOSLaunchScreen</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPhone\FM_LaunchImage_2436x1125.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>Default-Landscape-1125w-2436h@3x.png</RemoteName>
@@ -647,6 +700,15 @@
             <RemoteDir>GaussLegendrePIApproximation.app\</RemoteDir>
             <RemoteName>Default-Portrait~ipad.png</RemoteName>
             <DeployClass>iPad_Launch768x1024</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\iOS\iPad\FM_LaunchImage_2x.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).launchscreen\Assets\LaunchScreenImage.imageset\</RemoteDir>
+            <RemoteName>FM_LaunchScreenImage_iPad@2x.png</RemoteName>
+            <DeployClass>iPad_Launch2x</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -933,7 +995,6 @@
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Win64'"/>
-    <ItemGroup Condition="'$(Platform)'=='iOSDevice32'"/>
     <ItemGroup Condition="'$(Platform)'=='Win32'">
         <DeployFile Include="Win32\Debug\GaussLegendrePIApproximation.exe" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation\</RemoteDir>
@@ -946,8 +1007,29 @@
             <Required>True</Required>
         </DeployFile>
     </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='OSX32'">
-        <DeployFile Include="OSX32\Release\Project2.info.plist" Condition="'$(Config)'=='Release'">
+    <ItemGroup Condition="'$(Platform)'=='Linux64'">
+        <DeployFile Include="Linux64\Release\GaussLegendrePIApproximation" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX64'">
+        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation.entitlements</RemoteName>
+            <DeployClass>ProjectOSXEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.info.plist" Condition="'$(Config)'=='Release'">
             <RemoteDir>GaussLegendrePIApproximation.app\Contents\</RemoteDir>
             <RemoteName>Info.plist</RemoteName>
             <DeployClass>ProjectOSXInfoPList</DeployClass>
@@ -956,16 +1038,7 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
-            <DeployClass>DependencyModule</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX32\Release\GaussLegendrePIApproximation" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation" Condition="'$(Config)'=='Release'">
             <RemoteDir>GaussLegendrePIApproximation.app\Contents\MacOS\</RemoteDir>
             <RemoteName>GaussLegendrePIApproximation</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
@@ -975,19 +1048,65 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>GaussLegendrePIApproximation.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectOSXInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation.app\Contents\Resources\</RemoteDir>
-            <RemoteName>Project2.icns</RemoteName>
+            <RemoteName>GaussLegendrePIApproximation.icns</RemoteName>
             <DeployClass>ProjectOSXResource</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="OSX32\Release\Project2.entitlements" Condition="'$(Config)'=='Release'">
+        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.dSYM" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation</RemoteName>
+            <DeployClass>ProjectOSXDebug</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.entitlements" Condition="'$(Config)'=='Release'">
             <RemoteDir>GaussLegendrePIApproximation.app\..\</RemoteDir>
-            <RemoteName>Project2.entitlements</RemoteName>
+            <RemoteName>GaussLegendrePIApproximation.entitlements</RemoteName>
             <DeployClass>ProjectOSXEntitlements</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation.app\Contents\Resources\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation.icns</RemoteName>
+            <DeployClass>ProjectOSXResource</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>GaussLegendrePIApproximation.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.dSYM" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>GaussLegendrePIApproximation</RemoteName>
+            <DeployClass>ProjectOSXDebug</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
@@ -1094,15 +1213,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation\res\drawable-mdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon48</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
         <DeployFile Include="Android\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation\res\values\</RemoteDir>
             <RemoteName>strings.xml</RemoteName>
@@ -1157,6 +1267,15 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>GaussLegendrePIApproximation\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
             <RemoteDir>GaussLegendrePIApproximation\res\drawable-large\</RemoteDir>
@@ -1424,100 +1543,6 @@
             <RemoteDir>GaussLegendrePIApproximation\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-    </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='OSX64'">
-        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.entitlements" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\..\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation.entitlements</RemoteName>
-            <DeployClass>ProjectOSXEntitlements</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.info.plist" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\</RemoteDir>
-            <RemoteName>Info.plist</RemoteName>
-            <DeployClass>ProjectOSXInfoPList</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.info.plist" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\</RemoteDir>
-            <RemoteName>Info.plist</RemoteName>
-            <DeployClass>ProjectOSXInfoPList</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\Resources\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation.icns</RemoteName>
-            <DeployClass>ProjectOSXResource</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.dSYM" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation</RemoteName>
-            <DeployClass>ProjectOSXDebug</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX64\Release\GaussLegendrePIApproximation.entitlements" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\..\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation.entitlements</RemoteName>
-            <DeployClass>ProjectOSXEntitlements</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\Resources\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation.icns</RemoteName>
-            <DeployClass>ProjectOSXResource</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\Contents\MacOS\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation</RemoteName>
-            <DeployClass>ProjectOutput</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-            <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="OSX64\Debug\GaussLegendrePIApproximation.dSYM" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>GaussLegendrePIApproximation.app\..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
-            <RemoteName>GaussLegendrePIApproximation</RemoteName>
-            <DeployClass>ProjectOSXDebug</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>

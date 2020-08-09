@@ -79,6 +79,9 @@ begin
 {$IFDEF ANDROID}
   lblPlatformValue.Text := 'Android';
 {$ENDIF}
+{$IFDEF LINUX}
+  lblPlatformValue.Text := 'Linux';
+{$ENDIF}
 end;
 
 end.
