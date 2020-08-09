@@ -7,3 +7,6 @@ iOSDevice64
 OSX64
 __history
 *.xml
+*.local
+*.identcache
+*.bak
