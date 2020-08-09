@@ -3,8 +3,10 @@ unit FormGaussLegendrePIApproximation;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Edit, FMX.EditBox, FMX.NumberBox;
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit, FMX.EditBox, FMX.NumberBox;
 
 type
   TTGaussLegendrePIApproximationForm = class(TForm)
@@ -38,16 +40,15 @@ uses
   System.Math,
   gauss.legendre.pi;
 
-
 procedure TTGaussLegendrePIApproximationForm.butCalculateClick(Sender: TObject);
 var
   i, deltaMS, iterations, samples: integer;
   startime, endtime: tdatetime;
-  approx : double;
+  approx: double;
 begin
   butCalculate.Enabled := false;
-  lblTimingMSValue.Text := '(pending';
-  lblApproximationValue.Text := '(pending';
+  lblTimingMSValue.Text := '(pending)';
+  lblApproximationValue.Text := '(pending)';
   samples := trunc(edtSamples.Value);
   iterations := trunc(Log2(edtDigits.Value));
   startime := now;
@@ -55,9 +56,10 @@ begin
     approx := approximatePI(iterations);
   endtime := now;
   lblApproximationValue.Text := FloatToStr(approx);
-  deltaMS := trunc(TimeStampToMSecs(DateTimeToTimeStamp(endtime)) - TimeStampToMSecs(DateTimeToTimeStamp(startime)));
+  deltaMS := trunc(TimeStampToMSecs(DateTimeToTimeStamp(endtime)) -
+    TimeStampToMSecs(DateTimeToTimeStamp(startime)));
 
-  lblTimingMSValue.Text := floattostr(deltaMS);
+  lblTimingMSValue.Text := FloatToStr(deltaMS);
   butCalculate.Enabled := true;
 end;
 
