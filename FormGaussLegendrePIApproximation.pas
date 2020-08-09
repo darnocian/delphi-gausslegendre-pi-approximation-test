@@ -43,6 +43,7 @@ procedure TTGaussLegendrePIApproximationForm.butCalculateClick(Sender: TObject);
 var
   i, deltaMS, iterations, samples: integer;
   startime, endtime: tdatetime;
+  approx : double;
 begin
   butCalculate.Enabled := false;
   lblTimingMSValue.Text := '(pending';
@@ -51,10 +52,9 @@ begin
   iterations := trunc(Log2(edtDigits.Value));
   startime := now;
   for i := 1 to samples do
-  begin
-    lblApproximationValue.Text := FloatToStr(approximatePI(iterations));
-  end;
+    approx := approximatePI(iterations);
   endtime := now;
+  lblApproximationValue.Text := FloatToStr(approx);
   deltaMS := trunc(TimeStampToMSecs(DateTimeToTimeStamp(endtime)) - TimeStampToMSecs(DateTimeToTimeStamp(startime)));
 
   lblTimingMSValue.Text := floattostr(deltaMS);
