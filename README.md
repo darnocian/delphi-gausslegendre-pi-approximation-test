@@ -23,13 +23,13 @@ For n digits, iteration count of log2 n is used.
 
 *Release Build*
 
-Test Device | Win32 | Win64 | macOS | iOS | Android
----|---:|---:|---:|---:|---:
-MacBook 2014 | 867ms<sup>1</sup> | 763ms<sup>1</sup> | 1,699ms | - | -
-iPhone 6s 64bit | - | - | - | 6,875ms | -
-Cubot J7 Android 9 32bit | - | - | - | - | 53,850ms
-Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 781ms<sup>1</sup> | 656ms<sup>1</sup> | 1,404ms | - | -
-iPhone Xs | - | - | - | 4,748ms | -
+Test Device | Delphi Version | Win32 | Win64 | macOS | iOS | Android
+---|---|---:|---:|---:|---:|---:
+MacBook 2014 | ? | 867ms<sup>1</sup> | 763ms<sup>1</sup> | 1,699ms | - | -
+iPhone 6s 64bit | ? | - | - | - | 6,875ms | -
+Cubot J7 Android 9 32bit | ? | - | - | - | - | 53,850ms
+Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 781ms<sup>1</sup> | 656ms<sup>1</sup> | 1,404ms | - | -
+iPhone Xs | 10.4 (p.3) | - | - | - | 4,748ms | -
 
 1. Running in VMWare Fusion
 
