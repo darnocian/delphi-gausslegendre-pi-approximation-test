@@ -31,8 +31,8 @@ CV |iPhone 6s 64bit | 10.3.3 | - | - | - | 5,888ms | - | -
 CV |iPhone 6s 64bit | 10.4 (p.3) | - | - | - | 5,847ms | - | -
 CV |Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,832ms | -
 CV |Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
-RH |Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 781ms<sup>1</sup> | 656ms<sup>1</sup> | 1,404ms | - | - | 8,358ms<sup>1</sup>
-RH |iPhone Xs | 10.4 (p.3) | - | - | - | 4,748ms | - | -
+RH |Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 579ms<sup>1</sup> | 217ms<sup>1</sup> | 931ms | - | - | 8,288ms<sup>1</sup>
+RH |iPhone Xs | 10.4 (p.3) | - | - | - | 4,204ms | - | -
 
 1. Running in VMWare Fusion
 
