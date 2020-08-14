@@ -23,16 +23,20 @@ For n digits, iteration count of log2 n is used.
 
 *Timing Results*
 
-Tester | Test Device | Delphi Version | Win32 | Win64 | macOS | iOS | Android | Linux
----|---|---|---:|---:|---:|---:|---:|---:
-CV |MacBook Pro (Mid 2014) 3 GHz Dual-Core Intel Core i7 | 10.3.3 | 623ms<sup>1</sup> | 234ms<sup>1</sup> | 1,287ms | - | - | -
-CV |MacBook Pro (Mid 2014) 3 GHz Dual-Core Intel Core i7 | 10.4 (p.3) | 625ms<sup>1</sup> | 218ms<sup>1</sup> | 1,121ms | - | - | 9,364ms<sup>1</sup>
-CV |iPhone 6s 64bit | 10.3.3 | - | - | - | 5,888ms | - | -
-CV |iPhone 6s 64bit | 10.4 (p.3) | - | - | - | 5,847ms | - | -
-CV |Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,832ms | -
-CV |Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
-RH |Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 579ms<sup>1</sup> | 217ms<sup>1</sup> | 931ms | - | - | 8,288ms<sup>1</sup>
-RH |iPhone Xs | 10.4 (p.3) | - | - | - | 4,204ms | - | -
+Tester| Type  | Test Device | Delphi Version | Win32 | Win64 | macOS | iOS | Android | Linux
+---|---|---|---|---:|---:|---:|---:|---:|---:
+CV |Double |MacBook Pro (Mid 2014) 3 GHz Dual-Core Intel Core i7 | 10.3.3 | 531ms<sup>1</sup> | 234ms<sup>1</sup> | 865ms | - | - | -
+CV |Extended|MacBook Pro (Mid 2014) 3 GHz Dual-Core Intel Core i7 | 10.3.3 | 640ms<sup>1</sup> | 234ms<sup>1</sup> | 1,043ms | - | - | -
+CV |Double|iPhone 6s 64bit | 10.3.3 | - | - | - | 5,877ms | - | -
+CV |Extended|iPhone 6s 64bit | 10.3.3 | - | - | - | 5,966ms | - | -
+CV |Double|iPhone 6s 64bit | 10.4 (p.3) | - | - | - | 5,847ms | - | -
+CV |Extended|iPhone 6s 64bit | 10.4 (p.3) | - | - | - | 5,847ms | - | -
+CV |Double|Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,760ms | -
+CV |Extended|Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,771ms | -
+CV |Double|Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
+CV |Extended|Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
+RH |Extended|Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 579ms<sup>1</sup> | 217ms<sup>1</sup> | 931ms | - | - | 8,288ms<sup>1</sup>
+RH |Extended|iPhone Xs | 10.4 (p.3) | - | - | - | 4,204ms | - | -
 
 1. Running in VMWare Fusion
 
