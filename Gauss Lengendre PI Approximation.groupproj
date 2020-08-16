@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{47AC5F36-F2FC-4A75-B3DE-72C80280AAE2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="GaussLegendrePIApproximation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="GaussLegendrePIApproximationCli.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GaussLegendrePIApproximation">
+        <MSBuild Projects="GaussLegendrePIApproximation.dproj"/>
+    </Target>
+    <Target Name="GaussLegendrePIApproximation:Clean">
+        <MSBuild Projects="GaussLegendrePIApproximation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GaussLegendrePIApproximation:Make">
+        <MSBuild Projects="GaussLegendrePIApproximation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="GaussLegendrePIApproximationCli">
+        <MSBuild Projects="GaussLegendrePIApproximationCli.dproj"/>
+    </Target>
+    <Target Name="GaussLegendrePIApproximationCli:Clean">
+        <MSBuild Projects="GaussLegendrePIApproximationCli.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GaussLegendrePIApproximationCli:Make">
+        <MSBuild Projects="GaussLegendrePIApproximationCli.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GaussLegendrePIApproximation;GaussLegendrePIApproximationCli"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GaussLegendrePIApproximation:Clean;GaussLegendrePIApproximationCli:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GaussLegendrePIApproximation:Make;GaussLegendrePIApproximationCli:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
