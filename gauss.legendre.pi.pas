@@ -2,36 +2,52 @@ unit gauss.legendre.pi;
 
 interface
 
-type
-  // type used to change quickly between double or extended
-  // TFloat = double;
-  TFloat = extended;
-
-function approximatePI(iterations: integer): TFloat;
+function approximatePIe(iterations: integer): Extended;
+function approximatePId(iterations: integer): double;
 
 implementation
 
 uses
   System.Math;
 
-function approximatePI(iterations: integer): TFloat;
+function approximatePId(iterations: integer): double;
 var
-  a, b, t, x, y: TFloat;
+  a, b, T, x, y: double;
 begin
   a := 1;
   b := 1 / Sqrt(2.0);
-  t := 1 / 4;
+  T := 1 / 4;
   x := 1;
   while iterations > 0 do
   begin
     y := a;
     a := (a + b) / 2;
     b := Sqrt(b * y);
-    t := t - x * intpower(y - a, 2);
+    T := T - x * intpower(y - a, 2);
     x := 2 * x;
     dec(iterations);
   end;
-  result := power(a + b, 2) / (4 * t);
+  result := power(a + b, 2) / (4 * T);
+end;
+
+function approximatePIe(iterations: integer): Extended;
+var
+  a, b, T, x, y: Extended;
+begin
+  a := 1;
+  b := 1 / Sqrt(2.0);
+  T := 1 / 4;
+  x := 1;
+  while iterations > 0 do
+  begin
+    y := a;
+    a := (a + b) / 2;
+    b := Sqrt(b * y);
+    T := T - x * intpower(y - a, 2);
+    x := 2 * x;
+    dec(iterations);
+  end;
+  result := power(a + b, 2) / (4 * T);
 end;
 
 end.

@@ -9,22 +9,22 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   DesignerMasterStyle = 0
-  object lblTimingMSValue: TLabel
+  object lblTimingMSValueD: TLabel
     Position.X = 208.000000000000000000
     Position.Y = 104.000000000000000000
     Text = '(pending)'
-    TabOrder = 0
+    TabOrder = 1
   end
   object butCalculate: TButton
     Position.X = 208.000000000000000000
     Position.Y = 224.000000000000000000
-    TabOrder = 1
+    TabOrder = 2
     Text = 'Calculate'
     OnClick = butCalculateClick
   end
   object edtDigits: TNumberBox
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 3
+    TabOrder = 4
     Cursor = crIBeam
     Max = 99999997952.000000000000000000
     Value = 10000000.000000000000000000
@@ -33,7 +33,7 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
   end
   object edtSamples: TNumberBox
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 2
+    TabOrder = 3
     Cursor = crIBeam
     Max = 99999997952.000000000000000000
     Value = 1000000.000000000000000000
@@ -43,17 +43,17 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
   object lblTimingMS: TLabel
     Position.X = 24.000000000000000000
     Position.Y = 104.000000000000000000
-    Size.Width = 329.000000000000000000
+    Size.Width = 185.000000000000000000
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Total Time (ms)'
-    TabOrder = 4
+    TabOrder = 5
   end
   object lblSamples: TLabel
     Position.X = 24.000000000000000000
     Position.Y = 24.000000000000000000
     Text = 'Samples'
-    TabOrder = 5
+    TabOrder = 6
   end
   object lblDigits: TLabel
     Position.X = 24.000000000000000000
@@ -62,7 +62,7 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Digits'
-    TabOrder = 6
+    TabOrder = 7
   end
   object lblApproximation: TLabel
     Position.X = 24.000000000000000000
@@ -71,7 +71,7 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
     Size.Height = 17.000000000000000000
     Size.PlatformDefault = False
     Text = 'Approximation'
-    TabOrder = 7
+    TabOrder = 8
   end
   object lblApproximationValue: TLabel
     AutoSize = True
@@ -81,18 +81,24 @@ object TGaussLegendrePIApproximationForm: TTGaussLegendrePIApproximationForm
     Size.Height = 16.000000000000000000
     Size.PlatformDefault = False
     Text = '(pending)'
-    TabOrder = 8
+    TabOrder = 9
   end
   object lblPlatform: TLabel
     Position.X = 24.000000000000000000
     Position.Y = 184.000000000000000000
     Text = 'Platform'
-    TabOrder = 9
+    TabOrder = 10
   end
   object lblPlatformValue: TLabel
     Position.X = 208.000000000000000000
     Position.Y = 184.000000000000000000
     Text = 'lblPlatformValue'
-    TabOrder = 10
+    TabOrder = 11
+  end
+  object lblTimingMSValueE: TLabel
+    Position.X = 296.000000000000000000
+    Position.Y = 104.000000000000000000
+    Text = '(pending)'
+    TabOrder = 0
   end
 end
