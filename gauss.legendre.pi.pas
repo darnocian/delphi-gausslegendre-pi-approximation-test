@@ -2,15 +2,15 @@ unit gauss.legendre.pi;
 
 interface
 
-function approximatePIe(iterations: integer): Extended;
-function approximatePId(iterations: integer): double;
+function ApproximatePIE(AIterations: Integer): Extended;
+function ApproximatePID(AIterations: Integer): Double;
 
 implementation
 
 uses
   System.Math;
 
-function approximatePId(iterations: integer): double;
+function ApproximatePID(AIterations: Integer): Double;
 var
   a, b, T, x, y: double;
 begin
@@ -18,19 +18,19 @@ begin
   b := 1 / Sqrt(2.0);
   T := 1 / 4;
   x := 1;
-  while iterations > 0 do
+  while AIterations > 0 do
   begin
     y := a;
     a := (a + b) / 2;
     b := Sqrt(b * y);
-    T := T - x * intpower(y - a, 2);
+    T := T - x * IntPower(y - a, 2);
     x := 2 * x;
-    dec(iterations);
+    Dec(AIterations);
   end;
-  result := power(a + b, 2) / (4 * T);
+  Result := Power(a + b, 2) / (4 * T);
 end;
 
-function approximatePIe(iterations: integer): Extended;
+function ApproximatePIE(AIterations: Integer): Extended;
 var
   a, b, T, x, y: Extended;
 begin
@@ -38,16 +38,16 @@ begin
   b := 1 / Sqrt(2.0);
   T := 1 / 4;
   x := 1;
-  while iterations > 0 do
+  while AIterations > 0 do
   begin
     y := a;
     a := (a + b) / 2;
     b := Sqrt(b * y);
-    T := T - x * intpower(y - a, 2);
+    T := T - x * IntPower(y - a, 2);
     x := 2 * x;
-    dec(iterations);
+    Dec(AIterations);
   end;
-  result := power(a + b, 2) / (4 * T);
+  Result := Power(a + b, 2) / (4 * T);
 end;
 
 end.

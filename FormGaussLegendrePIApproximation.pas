@@ -58,19 +58,19 @@ begin
   // using Extended
   startime := now;
   for i := 1 to samples do
-    approx := approximatePIE(iterations);
+    approx := ApproximatePIE(iterations);
   endtime := now;
   lblApproximationValue.Text := FloatToStr(approx);
 
-  lblTimingMSValueE.Text := FloatToStr(millisecondDiff(startime, endtime));
+  lblTimingMSValueE.Text := FloatToStr(MillisecondDiff(startime, endtime));
 
   // using double
   startime := now;
   for i := 1 to samples do
-    approx := approximatePID(iterations);
+    approx := ApproximatePID(iterations);
   endtime := now;
 
-  lblTimingMSValueD.Text := FloatToStr(millisecondDiff(startime, endtime));
+  lblTimingMSValueD.Text := FloatToStr(MillisecondDiff(startime, endtime));
 
   butCalculate.Enabled := true;
 end;
