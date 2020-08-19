@@ -35,7 +35,9 @@ CV |Double|Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,760ms | -
 CV |Extended|Cubot J7 Android 9 32bit | 10.3.3 | - | - | - | - | 20,771ms | -
 CV |Double|Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
 CV |Extended|Cubot J7 Android 9 32bit | 10.4 (p.3) | - | - | - | - | 19,103ms | -
+RH |Double|Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 516ms<sup>1</sup> | 217ms<sup>1</sup> | 784ms | - | - | 7,677ms<sup>1</sup>
 RH |Extended|Mac Pro (Late 2013) 3GHz 8-Core Intel Xeon E5 | 10.4 (p.3) | 579ms<sup>1</sup> | 217ms<sup>1</sup> | 931ms | - | - | 8,288ms<sup>1</sup>
+RH |Double|iPhone Xs | 10.4 (p.3) | - | - | - | 4,161ms | - | -
 RH |Extended|iPhone Xs | 10.4 (p.3) | - | - | - | 4,204ms | - | -
 
 1. Running in VMWare Fusion
